@@ -61,9 +61,16 @@ const App = () => {
           secureTextEntry // same like "secureTextEntry={true}""
         />
 
-        <TouchableOpacity style={styles.buttonLogin}>
+        <TouchableOpacity style={[styles.buttonLogin, {marginTop: 32}]}>
           <Text style={{fontSize: 18, color: 'white', fontWeight: 'bold'}}>
             Login
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[styles.buttonLogin, {backgroundColor: '#010101'}]}>
+          <Text style={{fontSize: 18, color: 'white', fontWeight: 'bold'}}>
+            Register
           </Text>
         </TouchableOpacity>
       </View>
