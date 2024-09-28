@@ -3,12 +3,11 @@ import {StatusBar, Text, TextInput, View} from 'react-native';
 
 const App = () => {
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
     <View>
       <StatusBar backgroundColor={'#fafafa'} barStyle={'dark-content'} />
-
-      <Text>{email}</Text>
 
       <Text
         style={{
@@ -36,6 +35,22 @@ const App = () => {
         }}
         placeholder="Masukkan Email"
         onChangeText={text => setEmail(text)}
+      />
+
+      <TextInput
+        value={password}
+        style={{
+          backgroundColor: '#FFFFFF',
+          elevation: 2,
+          marginHorizontal: 20,
+          marginTop: 10,
+          borderRadius: 8,
+          paddingLeft: 10,
+          paddingRight: 10,
+        }}
+        placeholder="Masukkan Password"
+        onChangeText={text => setPassword(text)}
+        secureTextEntry // same like "secureTextEntry={true}""
       />
     </View>
   );
