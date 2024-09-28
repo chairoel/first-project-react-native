@@ -22,10 +22,12 @@ const App = () => {
           paddingBottom: 10,
           borderRadius: 8,
         }}
+
+        // action click
         // onPress={() => hello()} // on click default
         // onPressIn={() => hello()} //ketika button di tahan
         // onPressOut={() => hello()} // ketika button di lepas
-        onLongPress={() => hello()} // on long click default
+        // onLongPress={() => hello()} // on long click default
       >
         <Text style={{fontSize: 18, color: 'white'}}>Hello</Text>
       </TouchableOpacity>
