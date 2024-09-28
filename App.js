@@ -3,7 +3,7 @@ import {Text, View, StatusBar} from 'react-native';
 
 const App = () => {
   return (
-    <View>
+    <View style={{flex: 1, backgroundColor: '#282c34'}}>
       <StatusBar barStyle={'light-content'} backgroundColor={'#21252b'} />
       <View
         style={{
