@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Text, View, StatusBar} from 'react-native';
+import {Text, View, StatusBar, Image} from 'react-native';
 
 const App = () => {
   return (
@@ -21,6 +21,13 @@ const App = () => {
           }}>
           Aplikasoi kaomoji
         </Text>
+      </View>
+
+      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+        <Image
+          source={require('./src/images/pemandangan.jpg')}
+          style={{width: 250, height: 250}}
+        />
       </View>
     </View>
   );
