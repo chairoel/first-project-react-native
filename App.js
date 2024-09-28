@@ -26,7 +26,18 @@ const App = () => {
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
         <Image
           source={require('./src/images/pemandangan.jpg')}
-          style={{width: 250, height: 250}}
+          style={{
+            width: 250,
+            height: 250,
+            marginTop: 10,
+            marginBottom: 10,
+            marginLeft: 10,
+            marginRight: 10,
+
+            borderRadius: 250 / 2,
+            borderWidth: 2,
+            borderColor: 'white',
+          }}
         />
       </View>
 
