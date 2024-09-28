@@ -2,9 +2,13 @@ import React, {useState, useEffect} from 'react';
 import {StatusBar, Text, TextInput, View} from 'react-native';
 
 const App = () => {
+  const [email, setEmail] = useState('');
+
   return (
     <View>
       <StatusBar backgroundColor={'#fafafa'} barStyle={'dark-content'} />
+
+      <Text>{email}</Text>
 
       <Text
         style={{
@@ -20,6 +24,7 @@ const App = () => {
       </Text>
 
       <TextInput
+        value={email}
         style={{
           backgroundColor: '#FFFFFF',
           elevation: 2,
@@ -30,6 +35,7 @@ const App = () => {
           paddingRight: 10,
         }}
         placeholder="Masukkan Email"
+        onChangeText={text => setEmail(text)}
       />
     </View>
   );
