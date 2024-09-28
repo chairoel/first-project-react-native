@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {View} from 'react-native';
+import {Switch, View} from 'react-native';
 
 const App = () => {
+  const [lampu, setLampu] = useState(false);
+
   return (
     <View>
-      <Text></Text>
+      <Switch value={lampu} onValueChange={() => setLampu(!lampu)} />
     </View>
   );
 };
