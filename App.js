@@ -15,11 +15,13 @@ import {
 const App = () => {
   return (
     <View>
-      <Button
-        title="Login"
-        color={'#212121'}
-        onPress={() => Alert.alert('hello world')}
-      />
+      <View style={{marginHorizontal: 24, marginTop: 12}}>
+        <Button
+          title="Login"
+          color={'#212121'}
+          onPress={() => Alert.alert('hello world')}
+        />
+      </View>
     </View>
   );
 };
