@@ -4,14 +4,20 @@ import {Alert, Text, TouchableOpacity, View} from 'react-native';
 let saldo = 100000;
 
 const App = () => {
+  const [saldoSaya, setSaldoSaya] = useState(100000);
+
   function hitungDiskon() {
-    saldo = saldo - 10000;
-    Alert.alert('Saldo saya: ' + saldo);
+    let perhitungan;
+    perhitungan = saldoSaya - 10000;
+    setSaldoSaya(perhitungan);
+
+    // saldo = saldo - 10000;
+    // Alert.alert('Saldo saya: ' + saldo);
   }
 
   return (
     <View>
-      <Text>{saldo}</Text>
+      <Text>{saldoSaya}</Text>
       <TouchableOpacity onPress={() => hitungDiskon()}>
         <Text>Hitung Diskon</Text>
       </TouchableOpacity>
