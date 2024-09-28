@@ -1,21 +1,42 @@
 import React, {useState, useEffect} from 'react';
-import {StatusBar, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {
+  StatusBar,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+  Image,
+} from 'react-native';
 
 const App = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <View>
+    <View style={{flex: 1, justifyContent: 'center'}}>
       <StatusBar backgroundColor={'#fafafa'} barStyle={'dark-content'} />
+      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+        <Image
+          source={require('./src/images/pemandangan.jpg')}
+          style={{
+            width: 150,
+            height: 150,
+            marginTop: 10,
+            marginBottom: 10,
+            marginLeft: 10,
+            marginRight: 10,
+            borderRadius: 150 / 2,
+            borderWidth: 4,
+            borderColor: '#546e7a',
+          }}
+        />
+      </View>
 
       <Text
         style={{
           textAlign: 'center',
           fontSize: 18,
           fontWeight: 'bold',
-          marginTop: 24,
-
           color: '#000000',
         }}>
         Login
@@ -66,6 +87,7 @@ const App = () => {
           paddingTop: 10,
           paddingBottom: 10,
           borderRadius: 8,
+          marginBottom: 80,
         }}>
         <Text style={{fontSize: 18, color: 'white', fontWeight: 'bold'}}>
           Login
