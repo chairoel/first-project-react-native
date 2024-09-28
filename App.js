@@ -7,6 +7,7 @@ import {
   View,
   Image,
   ScrollView,
+  StyleSheet,
 } from 'react-native';
 
 const App = () => {
@@ -20,29 +21,11 @@ const App = () => {
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <Image
             source={require('./src/images/pemandangan.jpg')}
-            style={{
-              width: 150,
-              height: 150,
-              marginTop: 10,
-              marginBottom: 10,
-              marginLeft: 10,
-              marginRight: 10,
-              borderRadius: 150 / 2,
-              borderWidth: 4,
-              borderColor: '#546e7a',
-            }}
+            style={styles.photo}
           />
         </View>
 
-        <Text
-          style={{
-            textAlign: 'center',
-            fontSize: 18,
-            fontWeight: 'bold',
-            color: '#000000',
-          }}>
-          Login
-        </Text>
+        <Text style={styles.textLogin}>Login</Text>
         <Text style={{textAlign: 'center'}}>
           Silahkan masukkan email dan password
         </Text>
@@ -78,19 +61,7 @@ const App = () => {
           secureTextEntry // same like "secureTextEntry={true}""
         />
 
-        <TouchableOpacity
-          style={{
-            backgroundColor: '#0288d1',
-            marginHorizontal: 20,
-            marginTop: 20,
-            justifyContent: 'center',
-            alignItems: 'center',
-
-            paddingTop: 10,
-            paddingBottom: 10,
-            borderRadius: 8,
-            marginBottom: 80,
-          }}>
+        <TouchableOpacity style={styles.buttonLogin}>
           <Text style={{fontSize: 18, color: 'white', fontWeight: 'bold'}}>
             Login
           </Text>
@@ -99,5 +70,35 @@ const App = () => {
     </ScrollView>
   );
 };
+
+const styles = StyleSheet.create({
+  photo: {
+    width: 150,
+    height: 150,
+    marginTop: 20,
+    marginBottom: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    borderRadius: 150 / 2,
+    borderWidth: 4,
+    borderColor: '#546e7a',
+  },
+  textLogin: {
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000000',
+  },
+  buttonLogin: {
+    backgroundColor: '#0288d1',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 20,
+    marginTop: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
+    borderRadius: 8,
+  },
+});
 
 export default App;
