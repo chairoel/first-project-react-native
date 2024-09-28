@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {Alert, StatusBar, Text, TouchableOpacity, View} from 'react-native';
 
 const App = () => {
-  function hello(name) {
-    Alert.alert(`hello ${name}`);
+  function hello() {
+    Alert.alert(`hello saya`);
   }
 
   return (
@@ -22,7 +22,11 @@ const App = () => {
           paddingBottom: 10,
           borderRadius: 8,
         }}
-        onPress={() => hello('cinta')}>
+        // onPress={() => hello()} // on click default
+        // onPressIn={() => hello()} //ketika button di tahan
+        // onPressOut={() => hello()} // ketika button di lepas
+        onLongPress={() => hello()} // on long click default
+      >
         <Text style={{fontSize: 18, color: 'white'}}>Hello</Text>
       </TouchableOpacity>
     </View>
