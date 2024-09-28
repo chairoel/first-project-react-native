@@ -34,7 +34,11 @@ const App = () => {
             marginLeft: 10,
             marginRight: 10,
 
-            borderRadius: 250 / 2,
+            // borderRadius: 250 / 2,
+            borderTopRightRadius: 30,
+            borderTopLeftRadius: 9,
+            borderBottomLeftRadius: 30,
+            borderBottomRightRadius: 9,
             borderWidth: 2,
             borderColor: 'white',
           }}
