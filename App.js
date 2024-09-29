@@ -1,5 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {FlatList, Image, StatusBar, Text, View} from 'react-native';
+import {
+  Alert,
+  FlatList,
+  Image,
+  StatusBar,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 
 const negara = [
   'indonesia',
@@ -27,6 +35,13 @@ const daftarNegara = [
 ];
 
 const App = () => {
+  function showAlert() {
+    Alert.alert('Data Berhasil di Update', 'berhasil di tambahkan', [
+      {text: 'batal', onPress: () => console.log('batal di klik')},
+      {text: 'tidak', onPress: () => console.log('tidak di klik')},
+      {text: 'ya', onPress: () => console.log('ya di klik')},
+    ]);
+  }
   return (
     <View style={{flex: 1, backgroundColor: '#21252b'}}>
       <StatusBar backgroundColor={'#21252b'} barStyle={'light-content'} />
@@ -55,7 +70,7 @@ const App = () => {
       <FlatList
         data={daftarNegara}
         renderItem={({item, index}) => (
-          <View
+          <TouchableOpacity
             style={{
               marginHorizontal: 20,
               marginTop: 10,
@@ -66,7 +81,8 @@ const App = () => {
               borderRadius: 4,
               elevation: 3,
               flexDirection: 'row',
-            }}>
+            }}
+            onPress={() => showAlert()}>
             <View style={{marginLeft: 20, justifyContent: 'center', flex: 1}}>
               <Text style={{color: '#FFFFFF', fontWeight: 'bold'}}>
                 {item.nama}
@@ -83,7 +99,7 @@ const App = () => {
               }}
               source={{uri: item.image}}
             />
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>
