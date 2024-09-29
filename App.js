@@ -7,6 +7,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  ToastAndroid,
 } from 'react-native';
 
 const negara = [
@@ -36,11 +37,13 @@ const daftarNegara = [
 
 const App = () => {
   function showAlert() {
-    Alert.alert('Data Berhasil di Update', 'berhasil di tambahkan', [
-      {text: 'batal', onPress: () => console.log('batal di klik')},
-      {text: 'tidak', onPress: () => console.log('tidak di klik')},
-      {text: 'ya', onPress: () => console.log('ya di klik')},
-    ]);
+    // Alert.alert('Data Berhasil di Update', 'berhasil di tambahkan', [
+    //   {text: 'batal', onPress: () => console.log('batal di klik')},
+    //   {text: 'tidak', onPress: () => console.log('tidak di klik')},
+    //   {text: 'ya', onPress: () => console.log('ya di klik')},
+    // ]);
+
+    ToastAndroid.show('Sesuatu di Klik', ToastAndroid.SHORT);
   }
   return (
     <View style={{flex: 1, backgroundColor: '#21252b'}}>
